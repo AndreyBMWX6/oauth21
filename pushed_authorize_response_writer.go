@@ -13,7 +13,7 @@ import (
 
 // NewPushedAuthorizeResponse executes the handlers and builds the response
 func (p *OAuth2Provider) NewPushedAuthorizeResponse(ctx context.Context, ar AuthorizeRequester, session Session) (_ PushedAuthorizeResponder, err error) {
-	ctx, span := trace.SpanFromContext(ctx).TracerProvider().Tracer("github.com/ory/fosite").Start(ctx, "Fosite.NewPushedAuthorizeResponse")
+	ctx, span := trace.SpanFromContext(ctx).TracerProvider().Tracer("github.com/AndreyBMWX6/oauth21").Start(ctx, "OAuth2Provider.NewPushedAuthorizeResponse")
 	defer otelx.End(span, &err)
 
 	// Get handlers. If no handlers are defined, this is considered a misconfigured Fosite instance.

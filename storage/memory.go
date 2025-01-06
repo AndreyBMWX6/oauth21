@@ -99,7 +99,7 @@ func NewExampleStore() *MemoryStore {
 				RotatedSecrets: [][]byte{[]byte(`$2y$10$X51gLxUQJ.hGw1epgHTE5u0bt64xM0COU7K9iAp.OFg8p2pUd.1zC `)}, // = "foobaz",
 				RedirectURIs:   []string{"http://localhost:3846/callback"},
 				ResponseTypes:  []string{"id_token", "code", "token", "id_token token", "code id_token", "code token", "code id_token token"},
-				GrantTypes:     []string{"implicit", "refresh_token", "authorization_code", "password", "client_credentials"},
+				GrantTypes:     []string{"refresh_token", "authorization_code", "client_credentials"},
 				Scopes:         []string{"oauth21", "openid", "photos", "offline"},
 			},
 			"custom-lifespan-client": &oauth21.DefaultClientWithCustomTokenLifespans{
@@ -109,7 +109,7 @@ func NewExampleStore() *MemoryStore {
 					RotatedSecrets: [][]byte{[]byte(`$2y$10$X51gLxUQJ.hGw1epgHTE5u0bt64xM0COU7K9iAp.OFg8p2pUd.1zC `)}, // = "foobaz",
 					RedirectURIs:   []string{"http://localhost:3846/callback"},
 					ResponseTypes:  []string{"id_token", "code", "token", "id_token token", "code id_token", "code token", "code id_token token"},
-					GrantTypes:     []string{"implicit", "refresh_token", "authorization_code", "password", "client_credentials"},
+					GrantTypes:     []string{"refresh_token", "authorization_code", "client_credentials"},
 					Scopes:         []string{"oauth21", "openid", "photos", "offline"},
 				},
 				// test lifespans, todo: make normal values
@@ -134,7 +134,7 @@ func NewExampleStore() *MemoryStore {
 				RotatedSecrets: nil,
 				RedirectURIs:   []string{"http://localhost:3846/callback"},
 				ResponseTypes:  []string{"id_token", "code", "token", "id_token token", "code id_token", "code token", "code id_token token"},
-				GrantTypes:     []string{"implicit", "refresh_token", "authorization_code", "password", "client_credentials"},
+				GrantTypes:     []string{"refresh_token", "authorization_code", "client_credentials"},
 				Scopes:         []string{"oauth21", "openid", "photos", "offline"},
 			},
 		},

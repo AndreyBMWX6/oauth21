@@ -50,7 +50,7 @@ func (p *OAuth2Provider) findClientPublicJWK(ctx context.Context, oidcClient Ope
 }
 
 // AuthenticateClient authenticates client requests using the configured strategy
-// `OAuth2Provider.ClientAuthenticationStrategy`, if nil it uses `Fosite.DefaultClientAuthenticationStrategy`
+// `OAuth2Provider.ClientAuthenticationStrategy`, if nil it uses `OAuth2Provider.DefaultClientAuthenticationStrategy`
 func (p *OAuth2Provider) AuthenticateClient(ctx context.Context, r *http.Request, form url.Values) (Client, error) {
 	if s := p.Config.GetClientAuthenticationStrategy(ctx); s != nil {
 		return s(ctx, r, form)
