@@ -4,9 +4,8 @@ import (
 	"context"
 )
 
-// todo: uncomment
 // compile-time check
-//var _ OAuth2 = (*OAuth2Provider)(nil)
+var _ OAuth2 = (*OAuth2Provider)(nil)
 
 const MinParameterEntropy = 8
 

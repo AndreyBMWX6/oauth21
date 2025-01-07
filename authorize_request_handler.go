@@ -318,7 +318,7 @@ func (p *OAuth2Provider) authorizeRequestFromPAR(ctx context.Context, r *http.Re
 }
 
 func (p *OAuth2Provider) NewAuthorizeRequest(ctx context.Context, r *http.Request) (_ AuthorizeRequester, err error) {
-	ctx, span := trace.SpanFromContext(ctx).TracerProvider().Tracer("github.com/ory/fosite").Start(ctx, "Fosite.NewAuthorizeRequest")
+	ctx, span := trace.SpanFromContext(ctx).TracerProvider().Tracer("github.com/AndreyBMWX6/oauth21").Start(ctx, "OAuth2Provider.NewAuthorizeRequest")
 	defer otelx.End(span, &err)
 
 	return p.newAuthorizeRequest(ctx, r, false)
